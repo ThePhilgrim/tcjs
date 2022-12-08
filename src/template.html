@@ -8,6 +8,31 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <h1>Testing</h1>
+    <div class="flex-wrapper">
+      <div class="flex-spacer"></div>
+      <div class="calc-container">
+        <form action="">
+          <div class="form-element">
+            <div class="client-container">
+              <label for="" class="client-label">Client</label>
+              <select id="clientlist" class="client-menu"></select>
+            </div>
+            <div class="matrix-container">
+              <div class="matrix-headers">
+                <ul class="headers-container">
+                  <li class="header">TM Match</li>
+                  <li class="header">Word Count</li>
+                  <li class="header">% of Max Rate</li>
+                </ul>
+              </div>
+              <ul class="matrix-rows" id="row-container"></ul>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="button-container">
+        <button>Add Client</button><button>Edit Client</button><button>Delete Client</button>
+      </div>
+    </div>
   </body>
 </html>

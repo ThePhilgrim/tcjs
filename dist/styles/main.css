@@ -1,9 +1,108 @@
+/* Colors:
+    Grey: #3b414e 
+    Blue: #16bbc0
+*/
 * {
   box-sizing: border-box;
 }
 
-h1 {
-  color: blue;
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #3b414e;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.flex-wrapper {
+  height: 40em;
+  display: flex;
+  gap: 1.5em;
+}
+
+.calc-container {
+  width: 30em;
+  height: 40em;
+  background-color: #2f343e;
+  border-radius: 0.6em;
+  filter: drop-shadow(0 0 20px rgba(24, 27, 32, 0.2));
+}
+
+.flex-spacer {
+  width: 8em;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  width: 8em;
+  gap: 1em;
+}
+
+.client-container {
+  display: flex;
+  flex-direction: column;
+  width: 20em;
+  margin: 2em auto;
+}
+
+.client-label {
+  margin-left: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+.client-menu {
+  width: 20em;
+  align-self: center;
+}
+
+.headers-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1em;
+}
+
+.matrix-rows {
+  width: 100%;
+}
+
+.matrix-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 1.5em;
+  margin-bottom: 1.2em;
+}
+
+.col-1,
+.col-3 {
+  width: 3em;
+  margin: 1em;
+}
+
+.word-input {
+  width: 20em;
+}
+
+/* https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
 }
 
 /*# sourceMappingURL=main.css.map */
