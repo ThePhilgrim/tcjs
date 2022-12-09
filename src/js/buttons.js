@@ -1,5 +1,8 @@
 import { wordFields } from './handleClients';
 import { populateSumContainer } from './calculateRate';
+import { splitSum } from './helpers';
+
+export const clipboardBtn = document.getElementById('clipboard-btn');
 
 export function clearFields(e) {
   e.preventDefault();
@@ -11,4 +14,18 @@ export function clearFields(e) {
   populateSumContainer();
 
   wordFields[0].focus();
+}
+
+export function copyToClipboard(e) {
+  e.preventDefault();
+
+  let sum = splitSum();
+
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(sum).catch((err) => {
+      alert('Failed to copy the text to clipboard.', err);
+    });
+  } else if (window.clipboardData) {
+    window.clipboardData.setData('Text', sum);
+  }
 }
