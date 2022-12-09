@@ -1,6 +1,6 @@
 import { selectedClientData, wordFields } from './handleClients';
 
-const sumContainer = document.querySelector('.sum-container');
+export const sumContainer = document.querySelector('.sum-container');
 
 // selectedClientData = {
 //   currency: currentClient['currency'],
@@ -10,7 +10,7 @@ const sumContainer = document.querySelector('.sum-container');
 
 export function populateSumContainer(num = null) {
   if (num) {
-    sumContainer.innerHTML = `<h3>${num} ${selectedClientData['currency']}</h3>`;
+    sumContainer.innerHTML = `<h3 id="sumTotal">${num} ${selectedClientData['currency']}</h3>`;
   } else {
     sumContainer.innerHTML = '';
   }
