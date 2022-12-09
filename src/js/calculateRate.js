@@ -8,8 +8,12 @@ const sumContainer = document.querySelector('.sum-container');
 //   matrix: currentClient['matrix'],
 // };
 
-function populateSumContainer(num) {
-  sumContainer.innerHTML = `<h3>${num} ${selectedClientData['currency']}</h3>`;
+export function populateSumContainer(num = null) {
+  if (num) {
+    sumContainer.innerHTML = `<h3>${num} ${selectedClientData['currency']}</h3>`;
+  } else {
+    sumContainer.innerHTML = '';
+  }
 }
 
 function roundToTwo(num) {

@@ -1,4 +1,5 @@
 import { calculateRate } from './calculateRate';
+import { populateSumContainer } from './calculateRate';
 
 export const clientDropdown = document.getElementById('clientlist');
 const rowContainer = document.getElementById('row-container');
@@ -30,6 +31,9 @@ export async function createMatrix() {
   const clientMatrix = Object.entries(client['matrix']);
 
   const matrixRows = document.getElementsByClassName('matrix-row');
+
+  populateSumContainer();
+
   while (matrixRows.length > 0) {
     matrixRows[0].parentNode.removeChild(matrixRows[0]);
   }
@@ -50,6 +54,8 @@ export async function createMatrix() {
   wordFields.forEach((field) => {
     field.oninput = calculateRate;
   });
+
+  wordFields[0].focus();
 }
 
 function cacheCurrentClient(currentClient) {
