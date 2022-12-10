@@ -1,8 +1,11 @@
 import { wordFields } from './handleClients';
 import { populateSumContainer } from './calculateRate';
 import { splitSum } from './helpers';
+import { openModal, closeModal } from './addClient';
 
 export const clipboardBtn = document.getElementById('clipboard-btn');
+const addClientBtn = document.querySelector('.add-client-btn');
+const closeModalBtn = document.querySelector('.btn-close');
 
 export function clearFields(e) {
   e.preventDefault();
@@ -29,3 +32,6 @@ export function copyToClipboard(e) {
     window.clipboardData.setData('Text', sum);
   }
 }
+
+addClientBtn.addEventListener('click', openModal);
+closeModalBtn.addEventListener('click', closeModal);

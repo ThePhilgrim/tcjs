@@ -36,8 +36,47 @@
         </form>
       </div>
       <div class="client-button-container">
-        <button>Add Client</button><button>Edit Client</button><button>Delete Client</button>
+        <button class="add-client-btn">Add Client</button><button>Edit Client</button><button>Delete Client</button>
       </div>
+      <section class="modal hidden">
+        <button class="btn btn-close">X</button>
+        <h3 class="client-heading">Add Client</h3>
+        <form action="" class="add-client-form">
+          <label for="client-name">Client name</label>
+          <input type="text" id="client-name" />
+          <label for="currency">Currency</label>
+          <input type="text" id="currency" />
+          <label for="full-rate">Full rate</label>
+          <input type="number" id="full-rate" />
+          <div class="matrix-container">
+            <h4 class="matrix-header">TM Match Range</h4>
+            <h4 class="matrix-header">% of full rate</h4>
+            <div class="rate-row">
+              <input type="text" class="range-input" />
+              <input type="number" class="rate-input" />
+            </div>
+            <div class="rate-row">
+              <input type="text" class="range-input" />
+              <input type="number" class="rate-input" />
+            </div>
+            <div class="rate-row">
+              <input type="text" class="range-input" />
+              <input type="number" class="rate-input" />
+            </div>
+            <div class="rate-row">
+              <input type="text" class="range-input" />
+              <input type="number" class="rate-input" />
+            </div>
+            <div class="rate-row">
+              <input type="text" class="range-input" />
+              <input type="number" class="rate-input" />
+            </div>
+            <button class="add-row-btn">+</button>
+            <button class="delete-row-btn">-</button>
+          </div>
+        </form>
+      </section>
+      <div class="overlay hidden"></div>
     </div>
   </body>
 </html>
