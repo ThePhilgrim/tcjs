@@ -7,23 +7,23 @@
       "matrix": [
         {
           "range": "ICE",
-          "discount": "15"
+          "discount": 0.15
         },
         {
           "range": "100",
-          "discount": "20"
+          "discount": 0.2
         },
         {
           "range": "95",
-          "discount": "40"
+          "discount": 0.4
         },
         {
           "range": "50",
-          "discount": "75"
+          "discount": 0.75
         },
         {
           "range": "0",
-          "discount": "100"
+          "discount": 1
         }
       ],
       "id": 1
@@ -35,23 +35,23 @@
       "matrix": [
         {
           "range": "ICE",
-          "discount": "10"
+          "discount": 0.1
         },
         {
           "range": "100",
-          "discount": "25"
+          "discount": 0.25
         },
         {
           "range": "90",
-          "discount": "50"
+          "discount": 0.5
         },
         {
           "range": "50",
-          "discount": "70"
+          "discount": 0.7
         },
         {
           "range": "0",
-          "discount": "100"
+          "discount": 1
         }
       ],
       "id": 2
