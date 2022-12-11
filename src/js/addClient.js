@@ -26,7 +26,7 @@ export function saveNewClient(e) {
   };
 
   clientTMRange.forEach((tmRange, index) => {
-    newClient.matrix.push({ range: tmRange.value, discount: clientRateDiscount[index].value });
+    newClient.matrix.push({ range: tmRange.value, discount: clientRateDiscount[index].value / 100 });
   });
 
   postNewClientToServer(newClient);
