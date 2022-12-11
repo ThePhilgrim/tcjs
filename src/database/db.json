@@ -7,19 +7,19 @@
       "matrix": [
         {
           "range": "ICE",
-          "discount": 0.15
+          "discount": 0.1
         },
         {
           "range": "100",
-          "discount": 0.2
+          "discount": 0.1
         },
         {
-          "range": "95",
-          "discount": 0.4
+          "range": "75",
+          "discount": 0.25
         },
         {
           "range": "50",
-          "discount": 0.75
+          "discount": 0.6
         },
         {
           "range": "0",
@@ -27,34 +27,6 @@
         }
       ],
       "id": 1
-    },
-    {
-      "name": "Next",
-      "currency": "USD",
-      "full_rate": "0.2",
-      "matrix": [
-        {
-          "range": "ICE",
-          "discount": 0.1
-        },
-        {
-          "range": "100",
-          "discount": 0.25
-        },
-        {
-          "range": "90",
-          "discount": 0.5
-        },
-        {
-          "range": "50",
-          "discount": 0.7
-        },
-        {
-          "range": "0",
-          "discount": 1
-        }
-      ],
-      "id": 2
     }
   ]
 }

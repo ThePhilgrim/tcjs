@@ -6,7 +6,7 @@ const rowContainer = document.getElementById('row-container');
 export let selectedClientData;
 export let wordFields;
 
-async function getClients(id = null) {
+function getClients(id = null) {
   if (!id) {
     return fetch('http://localhost:3000/clients').then((res) => res.json());
   } else {
@@ -17,6 +17,10 @@ async function getClients(id = null) {
 export async function populateClientList() {
   const clients = await getClients();
 
+  for (let i = clientDropdown.options.length; i >= 0; i--) {
+    clientDropdown.options.remove(i);
+  }
+
   clients.forEach((client) => {
     clientDropdown.insertAdjacentHTML('beforeend', `<option value="${client.id}">${client.name}</option>`);
   });
@@ -25,6 +29,10 @@ export async function populateClientList() {
 }
 
 export async function createMatrix() {
+  if (clientDropdown.options.length === 0) {
+    return;
+  }
+
   const selectedClient = clientDropdown.options[clientDropdown.selectedIndex].value;
   const client = await getClients(selectedClient);
 
