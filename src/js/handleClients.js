@@ -32,8 +32,9 @@ export async function createMatrix() {
   const selectedClient = clientDropdown.options[clientDropdown.selectedIndex].value;
   const client = await getClients(selectedClient);
 
-  const clientMatrix = Object.entries(client['matrix']);
+  const clientMatrix = client.matrix;
 
+  // TODO: Can I get the ul ".matrix-rows" here and do .removeChild without "parentNode"?
   const matrixRows = document.getElementsByClassName('matrix-row');
 
   populateSumContainer();
@@ -45,9 +46,9 @@ export async function createMatrix() {
   clientMatrix.forEach((matrixRow) => {
     rowContainer.insertAdjacentHTML(
       'beforeend',
-      `<li class="matrix-row"><h5 class="col-1">${matrixRow[0]}</h5><input type="number" class="word-input" id="${
-        matrixRow[1]
-      }"/><h5 class="col-3">${matrixRow[1] * 100}%</h5></li>`
+      `<li class="matrix-row"><h5 class="col-1">${matrixRow.range}</h5><input type="number" class="word-input" id="${
+        matrixRow.discount
+      }"/><h5 class="col-3">${matrixRow.discount * 100}%</h5></li>`
     );
   });
 

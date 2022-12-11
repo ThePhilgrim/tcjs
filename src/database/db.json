@@ -1,8 +1,7 @@
 {
   "clients": [
     {
-      "id": 1,
-      "name": "Apple",
+      "name": "Samsung",
       "currency": "EUR",
       "full_rate": 0.16,
       "matrix": {
