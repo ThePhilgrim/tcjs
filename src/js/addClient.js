@@ -1,12 +1,21 @@
-const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay');
+export function saveNewClient(e) {
+  e.preventDefault();
 
-export const openModal = function () {
-  modal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-};
+  const clientName = document.getElementById('save-client-name');
+  const clientCurrency = document.getElementById('save-currency');
+  const clientFullRate = document.getElementById('save-full-rate');
+  const clientTMRange = document.querySelectorAll('.save-range-input');
+  const clientRateDiscount = document.querySelectorAll('.save-rate-input');
 
-export const closeModal = function () {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
-};
+  const newClient = {
+    name: clientName,
+    currency: clientCurrency,
+    full_rate: clientFullRate,
+    matrix: {},
+  };
+
+  clientTMRange.forEach((range, index) => {
+    console.log(range.value);
+    console.log(index);
+  });
+}

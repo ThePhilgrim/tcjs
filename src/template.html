@@ -42,37 +42,38 @@
         <button class="btn btn-close">X</button>
         <h3 class="client-heading">Add Client</h3>
         <form action="" class="add-client-form">
-          <label for="client-name">Client name</label>
-          <input type="text" id="client-name" />
-          <label for="currency">Currency</label>
-          <input type="text" id="currency" />
-          <label for="full-rate">Full rate</label>
-          <input type="number" id="full-rate" />
+          <label for="client-name">Client name*</label>
+          <input type="text" id="save-client-name" required />
+          <label for="currency">Currency*</label>
+          <input type="text" id="save-currency" reuired />
+          <label for="full-rate">Full rate per word*</label>
+          <input type="number" id="save-full-rate" required />
           <div class="matrix-container">
             <h4 class="matrix-header">TM Match Range</h4>
             <h4 class="matrix-header">% of full rate</h4>
             <div class="rate-row">
-              <input type="text" class="range-input" />
-              <input type="number" class="rate-input" />
+              <input type="text" class="save-range-input" />
+              <input type="number" class="save-rate-input" min="1" max="100" step="1" />
             </div>
             <div class="rate-row">
-              <input type="text" class="range-input" />
-              <input type="number" class="rate-input" />
+              <input type="text" class="save-range-input" />
+              <input type="number" class="save-rate-input" min="1" max="100" step="1" />
             </div>
             <div class="rate-row">
-              <input type="text" class="range-input" />
-              <input type="number" class="rate-input" />
+              <input type="text" class="save-range-input" />
+              <input type="number" class="save-rate-input" min="1" max="100" step="1" />
             </div>
             <div class="rate-row">
-              <input type="text" class="range-input" />
-              <input type="number" class="rate-input" />
+              <input type="text" class="save-range-input" />
+              <input type="number" class="save-rate-input" min="1" max="100" step="1" />
             </div>
             <div class="rate-row">
-              <input type="text" class="range-input" />
-              <input type="number" class="rate-input" />
+              <input type="text" class="save-range-input" />
+              <input type="number" class="save-rate-input" min="1" max="100" step="1" />
             </div>
             <button class="add-row-btn">+</button>
             <button class="delete-row-btn">-</button>
+            <input type="submit" value="Save Client" id="save-client-submit" />
           </div>
         </form>
       </section>
