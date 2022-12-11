@@ -5,21 +5,94 @@
       "name": "Apple",
       "currency": "EUR",
       "full_rate": 0.16,
-      "matrix": { "ICE": 0.1, "100": 0.1, "99-50": 0.6, "49-0": 1 }
+      "matrix": {
+        "100": 0.1,
+        "ICE": 0.1,
+        "99-50": 0.6,
+        "49-0": 1
+      }
     },
     {
       "id": 2,
       "name": "Microsoft",
       "currency": "EUR",
       "full_rate": 0.12,
-      "matrix": { "ICE": 0.2, "100-70": 0.6, "69-0": 1 }
+      "matrix": {
+        "ICE": 0.2,
+        "100-70": 0.6,
+        "69-0": 1
+      }
     },
     {
       "id": 3,
       "name": "Oliver",
       "currency": "EUR",
       "full_rate": 0.13,
-      "matrix": { "ICE": 0.25, "100": 0.25, "99-95": 0.3, "94-85": 0.6, "84-75": 0.6, "New": 1, "Repetitions": 0.3 }
+      "matrix": {
+        "100": 0.25,
+        "ICE": 0.25,
+        "99-95": 0.3,
+        "94-85": 0.6,
+        "84-75": 0.6,
+        "New": 1,
+        "Repetitions": 0.3
+      }
+    },
+    {
+      "name": "Samsung",
+      "currency": "EUR",
+      "full_rate": "0.18",
+      "matrix": [
+        {
+          "range": "ICE",
+          "discount": "15"
+        },
+        {
+          "range": "100",
+          "discount": "20"
+        },
+        {
+          "range": "95",
+          "discount": "40"
+        },
+        {
+          "range": "50",
+          "discount": "75"
+        },
+        {
+          "range": "0",
+          "discount": "100"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "name": "Next",
+      "currency": "USD",
+      "full_rate": "0.2",
+      "matrix": [
+        {
+          "range": "ICE",
+          "discount": "10"
+        },
+        {
+          "range": "100",
+          "discount": "25"
+        },
+        {
+          "range": "90",
+          "discount": "50"
+        },
+        {
+          "range": "50",
+          "discount": "70"
+        },
+        {
+          "range": "0",
+          "discount": "100"
+        }
+      ],
+      "id": 5
     }
   ]
 }
