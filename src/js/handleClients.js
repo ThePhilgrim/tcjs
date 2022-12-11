@@ -29,6 +29,10 @@ export async function populateClientList() {
 }
 
 export async function createMatrix() {
+  if (clientDropdown.options.length === 0) {
+    return;
+  }
+
   const selectedClient = clientDropdown.options[clientDropdown.selectedIndex].value;
   const client = await getClients(selectedClient);
 
